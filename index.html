@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>高度な To-do リスト</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>To-doリスト</h1>
+    <form id="todo-form">
+      <input type="text" id="todo-input" placeholder="新しいタスクを入力" required>
+      <input type="date" id="todo-date">
+      <select id="todo-priority">
+        <option value="低">低</option>
+        <option value="中" selected>中</option>
+        <option value="高">高</option>
+      </select>
+      <button type="submit">追加</button>
+    </form>
+    
+    <div class="filters">
+      <button data-filter="all" class="filter-btn active">全て</button>
+      <button data-filter="active" class="filter-btn">未完了</button>
+      <button data-filter="completed" class="filter-btn">完了</button>
+    </div>
+    
+    <ul id="todo-list">
+      <!-- タスクはここに追加されます -->
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
