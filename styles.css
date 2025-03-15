@@ -1,167 +1,41 @@
-/* カラーパレットと基本設定 */
-:root {
-  --primary-color: #4A90E2;
-  --primary-color-hover: #3a78c2;
-  --secondary-color: #E8F1F9;
-  --text-color: #333;
-  --bg-color: #fff;
-  --border-color: #ddd;
-  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-  line-height: 1.6;
-  padding: 20px;
-}
-
-/* コンテナ（カード風のデザイン） */
-.container {
-  max-width: 600px;
-  margin: 40px auto;
-  background-color: var(--bg-color);
-  border-radius: 10px;
-  padding: 30px;
-  box-shadow: var(--shadow);
-}
-
-/* 見出し */
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* フォーム */
-#todo-form {
+  background-color: #e9f0ff;
+  color: #333;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-#todo-form input[type="text"],
-#todo-form input[type="date"],
-#todo-form select {
-  flex: 1;
-  padding: 12px;
-  border: 1px solid var(--border-color);
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-#todo-form button {
-  padding: 12px 20px;
-  font-size: 16px;
-  border: none;
-  background-color: var(--primary-color);
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#todo-form button:hover {
-  background-color: var(--primary-color-hover);
-}
-
-/* フィルター */
-.filters {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.filter-btn {
-  padding: 8px 16px;
-  margin: 0 5px;
-  border: none;
-  background-color: var(--border-color);
-  color: var(--text-color);
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.filter-btn.active,
-.filter-btn:hover {
-  background-color: var(--primary-color);
-  color: #fff;
-}
-
-/* タスクリスト */
-#todo-list {
-  list-style: none;
-}
-
-.todo-item {
-  display: flex;
+  justify-content: center;
   align-items: center;
-  background-color: var(--secondary-color);
-  margin-bottom: 10px;
-  padding: 15px;
-  border-radius: 5px;
-  box-shadow: var(--shadow);
+  height: 100vh;
+  margin: 0;
 }
 
-.todo-item:last-child {
-  margin-bottom: 0;
+.container {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  padding: 30px;
 }
 
-.todo-checkbox {
-  margin-right: 15px;
-  width: 20px;
-  height: 20px;
+.quote-box {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #444;
 }
 
-.todo-text {
-  flex: 1;
+#generate-btn {
+  padding: 10px 20px;
   font-size: 16px;
-}
-
-/* 完了タスク */
-.todo-text.completed {
-  text-decoration: line-through;
-  color: #777;
-}
-
-/* 期日・優先度 */
-.todo-date,
-.todo-priority {
-  margin-left: 10px;
-  font-size: 14px;
-  color: #555;
-}
-
-/* 編集・削除ボタン */
-.edit-btn,
-.delete-btn {
-  margin-left: 10px;
-  padding: 6px 12px;
-  font-size: 14px;
   border: none;
-  border-radius: 5px;
+  background-color: #4A90E2;
+  color: #fff;
+  border-radius: 6px;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s;
 }
 
-.edit-btn {
-  background-color: #28a745;
-  color: #fff;
-}
-
-.delete-btn {
-  background-color: #dc3545;
-  color: #fff;
-}
-
-.edit-btn:hover,
-.delete-btn:hover {
+#generate-btn:hover {
   opacity: 0.8;
 }
